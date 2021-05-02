@@ -19,6 +19,12 @@ const convert_int_to_phonetic = (num) => {
     return "NotaNumber";
   }
 
+  if(n < 0) {
+    n *= -1;
+    num = num.slice(1);
+    phonetic_equivalent += "Negative";
+  }
+
   for (var i = 0; i < num.length; i++) {
     str_phonetic_equivalent += phonetic_equivalent[num.charAt(i)];
   }
