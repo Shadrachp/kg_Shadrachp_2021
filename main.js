@@ -11,17 +11,19 @@ const phonetic_equivalent = {
   '9' : 'Nine',
 }
 
-
 const convert_int_to_phonetic = (num) => {
-  let phonetic_equivalent = "";
+  let str_phonetic_equivalent = "";
   let n = parseInt(num);
 
-  if(!isNaN(n)) {
-
-  } else {
+  if(isNaN(n)) {
     return "NotaNumber";
   }
 
+  for (var i = 0; i < num.length; i++) {
+    str_phonetic_equivalent += phonetic_equivalent[num.charAt(i)];
+  }
+
+  return str_phonetic_equivalent;
 }
 
 //get input from params (args) after node <filename> (console)
