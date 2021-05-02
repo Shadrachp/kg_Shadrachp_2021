@@ -26,7 +26,7 @@ const convert_int_to_phonetic = (num) => {
   }
 
   for (var i = 0; i < num.length; i++) {
-    if(!phonetic_equivalent.hasOwnProperty(num.charAt(i)));
+    if(!phonetic_equivalent.hasOwnProperty(num.charAt(i)))
       return "NotanInteger";
 
     str_phonetic_equivalent += phonetic_equivalent[num.charAt(i)];
