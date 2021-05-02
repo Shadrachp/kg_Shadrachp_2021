@@ -39,7 +39,7 @@ const get_input = () => {
 
 const main = (input) => {
   input.map(num => {
-
+    this.stdout.write(num + ',');
   });
 };
 
