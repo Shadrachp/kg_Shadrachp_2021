@@ -22,7 +22,7 @@ const convert_int_to_phonetic = (num) => {
   if(n < 0) {
     n *= -1;
     num = num.slice(1);
-    phonetic_equivalent += "Negative";
+    str_phonetic_equivalent += "Negative";
   }
 
   for (var i = 0; i < num.length; i++) {
@@ -38,8 +38,18 @@ const get_input = () => {
 };
 
 const main = (input) => {
+  let count = 0;
   input.map(num => {
-    this.stdout.write(num + ',');
+    let out = convert_int_to_phonetic(num);
+
+    if(count < input.length - 1) {
+      out += ',';
+    } else {
+      out += '\n';
+    }
+
+    process.stdout.write(out);
+    count++;
   });
 };
 
